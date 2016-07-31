@@ -9,6 +9,8 @@ public:
 	string movieTitle;
 	
 private:
+	Movies();
+	Movies(int, string);
 	int getMovieId();
 	int getMovieTitle();
 };
