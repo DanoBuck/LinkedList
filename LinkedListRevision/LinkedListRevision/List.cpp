@@ -14,9 +14,8 @@ void List::add(int id, string title) {
 	else {
 		Node *tempPtr = NULL;
 
-		for (tempPtr = head; tempPtr->next; tempPtr = tempPtr->next) {
-			tempPtr->next = newNode;
-		}
+		for (tempPtr = head; tempPtr->next; tempPtr = tempPtr->next);
+		tempPtr->next = newNode;
 	}
 }
 

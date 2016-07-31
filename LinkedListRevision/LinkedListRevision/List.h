@@ -1,5 +1,3 @@
-#pragma once
-
 #include <string>
 #include "Node.h"
 using namespace std;
@@ -10,7 +8,6 @@ private:
 
 public:
 	List();
-	List(Node&);
 	void add(int, string);
 	void deleteLast();
 	void display();

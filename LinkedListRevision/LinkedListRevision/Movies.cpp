@@ -17,3 +17,11 @@ int Movies::getMovieId() {
 string Movies::getMovieTitle() {
 	return movieTitle;
 }
+
+void Movies::setMovieId(int id) {
+	movieId = id;
+}
+
+void Movies::setMovieTitle(string title) {
+	movieTitle = title;
+}
