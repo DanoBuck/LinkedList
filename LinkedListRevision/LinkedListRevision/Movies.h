@@ -12,5 +12,7 @@ public:
 	Movies();
 	Movies(int, string);
 	int getMovieId();
-	int getMovieTitle();
+	string getMovieTitle();
+	void setMovieId(int);
+	void setMovieTitle(string);
 };

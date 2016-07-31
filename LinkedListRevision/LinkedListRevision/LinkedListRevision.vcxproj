@@ -114,6 +114,11 @@
     <ClInclude Include="Movies.h" />
     <ClInclude Include="Node.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="List.cpp" />
+    <ClCompile Include="Movies.cpp" />
+    <ClCompile Include="Node.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
