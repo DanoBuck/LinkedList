@@ -5,11 +5,11 @@ using namespace std;
 
 class Node {
 	friend class List;
-public:
+private:
 	Node* next;
 	Movies movie;
 
-private:
+public:
 	Node();
 	Node(int, string);
 };

@@ -4,11 +4,11 @@
 using namespace std;
 
 class Movies {
-public:
+private:
 	int movieId;
 	string movieTitle;
 	
-private:
+public:
 	Movies();
 	Movies(int, string);
 	int getMovieId();
