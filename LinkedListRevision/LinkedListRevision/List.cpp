@@ -32,6 +32,27 @@ void List::deleteLast() {
 	delete leadPtr;
 }
 
+void List::deleteTitle(string title) {
+	Node *leadPtr = head;
+	Node *trailPtr = NULL;
+
+	if (head->movie.getMovieTitle() == title) {
+		head = head->next;
+		delete leadPtr;
+	}
+	else {
+
+		while (leadPtr != NULL && leadPtr->movie.getMovieTitle() != title) {
+			trailPtr = leadPtr;
+			leadPtr = leadPtr->next;
+		}
+		if (leadPtr->movie.getMovieTitle() == title) {
+			trailPtr->next = leadPtr->next;
+			delete leadPtr;
+		}
+	}
+}
+
 void List::display() {
 	Node *tempPtr = head;
 

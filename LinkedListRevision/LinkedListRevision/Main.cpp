@@ -7,6 +7,7 @@ int main() {
 	myList.add(2, "Movie 2");
 	myList.add(3, "Movie 3");
 	myList.deleteLast();
+	myList.deleteTitle("Movie 1");
 		
 	myList.display();
 
