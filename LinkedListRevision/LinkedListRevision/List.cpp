@@ -5,6 +5,25 @@ List::List() {
 	head = NULL;
 }
 
+List::List(const List& newList) {
+	Node *tempPtr = newList.head;
+
+	while (tempPtr != NULL) {
+		add(tempPtr->movie.getMovieId(), tempPtr->movie.getMovieTitle());
+		tempPtr = tempPtr->next;
+	}
+}
+
+List::~List() {
+	Node *tempPtr = NULL;
+
+	while (head) {
+		tempPtr = head;
+		head = head->next;
+		delete tempPtr;
+	}
+}
+
 void List::add(int id, string title) {
 	Node *newNode = new Node(id, title);
 
@@ -60,4 +79,20 @@ void List::display() {
 		cout << "Movie Id: " << tempPtr->movie.getMovieId() << "\nMovie Title: " << tempPtr->movie.getMovieTitle() << "\n";
 		tempPtr = tempPtr->next;
 	}
+}
+
+List& List::operator=(const List& newList) {
+	if (this != &newList) {
+		while (head != NULL) {
+			deleteLast();
+			head = head->next;
+		}
+
+		Node *tempPtr = newList.head;
+		while (tempPtr != NULL) {
+			add(tempPtr->movie.getMovieId(), tempPtr->movie.getMovieTitle());
+			tempPtr = tempPtr->next;
+		}
+	}
+	return(*this);
 }
